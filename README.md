@@ -5,14 +5,21 @@ After a lot of frustration trying to get a BLTouch and a clone (3DTouch) device 
 
 This code is based on a simple Arduino program running on an Arduino ProMini but would be easily transportable to the Uno or any othe flavour.
 
-Connect 5V to Red
-Connect Gnd to Brown
-Connect Pin 9 to Orange / Yellow
-Connect Pin 2 to White.
+The hardware for this system is hooked up as follows :
 
-Serial port to 9600 and dont send CR or LF
+#PIN     Use
+2       BLTouch - White (Sensor output)
+9       BLTouch - Orange (Signal)
 
-Send 1 to Pin Down
-Send 2 to Pin Up
-Send 3 to Test
-Send 4 to Reset
+BLTouch Red = 5V
+BLTouch Brown = 0V / Ground
+
+Once that is all hooked up and code installed, when powered up the BLTouch should do the twice pin down and up self diagnostics.
+
+Open serial monitor and send the following to test.
+
+#Character Sent      Action
+1                     Pin Down
+2                     Pin Up
+3                     Self Test Process
+4                     Reset
